@@ -175,9 +175,23 @@ class VideoDownloader:
             logger.info(f"URL数量: {len(urls)}")
             
             # 下载每个URL
-            for j, url in enumerate(urls, 1):
+            for j, url_config in enumerate(urls, 1):
                 logger.info(f"\n下载 URL {j}/{len(urls)}")
-                if self.download_url(url, download_path, f"{description} - {j}"):
+                
+                # 兼容旧格式（字符串）和新格式（字典）
+                if isinstance(url_config, str):
+                    url = url_config
+                    url_description = f"{description} - {j}"
+                else:
+                    url = url_config.get('url', '')
+                    url_description = url_config.get('description', f"{description} - {j}")
+                
+                if not url:
+                    logger.error(f"URL配置 {j} 缺少URL")
+                    fail_count += 1
+                    continue
+                    
+                if self.download_url(url, download_path, url_description):
                     success_count += 1
                 else:
                     fail_count += 1
@@ -190,15 +204,22 @@ class VideoDownloader:
         print("\n=== 添加新的下载配置 ===")
         
         download_path = input("请输入下载路径: ").strip()
-        description = input("请输入描述: ").strip()
+        description = input("请输入配置描述: ").strip()
         
         urls = []
-        print("请输入URL（每行一个，输入空行结束）:")
+        print("请输入URL和描述（输入空行结束）:")
         while True:
-            url = input().strip()
+            url = input("URL: ").strip()
             if not url:
                 break
-            urls.append(url)
+            url_description = input("描述: ").strip()
+            if not url_description:
+                url_description = f"视频 {len(urls) + 1}"
+            
+            urls.append({
+                "url": url,
+                "description": url_description
+            })
             
         if not download_path or not description or not urls:
             print("输入不完整，取消添加")
@@ -219,6 +240,80 @@ class VideoDownloader:
             print(f"配置已添加并保存到 {self.config_file}")
         except Exception as e:
             print(f"保存配置失败: {e}")
+            
+    def list_configs(self) -> None:
+        """列出所有配置"""
+        download_configs = self.config.get('download_configs', [])
+        
+        if not download_configs:
+            print("没有找到任何配置")
+            return
+            
+        print(f"\n共找到 {len(download_configs)} 个配置：")
+        print("="*60)
+        
+        for i, config in enumerate(download_configs):
+            print(f"{i}: {config.get('description', '无描述')}")
+            print(f"   路径: {config.get('download_path', '无路径')}")
+            print(f"   URL数量: {len(config.get('urls', []))}")
+            
+            # 显示URL详情
+            urls = config.get('urls', [])
+            for j, url_config in enumerate(urls):
+                if isinstance(url_config, str):
+                    print(f"   URL {j+1}: {url_config}")
+                else:
+                    print(f"   URL {j+1}: {url_config.get('description', '无描述')}")
+                    print(f"         {url_config.get('url', '无URL')}")
+            print("-"*60)
+            
+    def interactive_add_url(self) -> None:
+        """交互式向现有配置添加URL"""
+        self.list_configs()
+        
+        try:
+            config_index = int(input("\n请输入要添加URL的配置索引: "))
+            url = input("请输入URL: ").strip()
+            url_description = input("请输入URL描述: ").strip()
+            
+            if not url or not url_description:
+                print("输入不完整，取消添加")
+                return
+                
+            if self.add_url_to_config(config_index, url, url_description):
+                print("URL添加成功")
+            else:
+                print("URL添加失败")
+                
+        except ValueError:
+            print("请输入有效的索引数字")
+        except Exception as e:
+            print(f"添加URL时发生错误: {e}")
+            
+    def add_url_to_config(self, config_index: int, url: str, url_description: str) -> bool:
+        """向指定配置添加URL"""
+        try:
+            if config_index < 0 or config_index >= len(self.config['download_configs']):
+                logger.error(f"配置索引超出范围: {config_index}")
+                return False
+                
+            new_url = {
+                "url": url,
+                "description": url_description
+            }
+            
+            self.config['download_configs'][config_index]['urls'].append(new_url)
+            
+            # 保存配置文件
+            with open(self.config_file, 'w', encoding='utf-8') as f:
+                json.dump(self.config, f, ensure_ascii=False, indent=4)
+            
+            logger.info(f"成功添加URL到配置 {config_index}")
+            return True
+            
+        except Exception as e:
+            logger.error(f"添加URL失败: {e}")
+            return False
 
 def main():
     """主函数"""
@@ -228,19 +323,29 @@ def main():
         command = sys.argv[1]
         if command == 'add':
             downloader.interactive_add_config()
+        elif command == 'addurl':
+            downloader.interactive_add_url()
+        elif command == 'list':
+            downloader.list_configs()
         elif command == 'download':
             downloader.download_all()
         else:
-            print("未知命令，支持的命令: add, download")
+            print("未知命令，支持的命令: add, addurl, list, download")
     else:
         print("视频下载器")
         print("使用方法:")
         print("  python download.py add      - 添加新的下载配置")
+        print("  python download.py addurl   - 向现有配置添加URL")
+        print("  python download.py list     - 列出所有配置")
         print("  python download.py download - 开始下载")
         
-        choice = input("\n请选择操作 (add/download): ").strip().lower()
+        choice = input("\n请选择操作 (add/addurl/list/download): ").strip().lower()
         if choice == 'add':
             downloader.interactive_add_config()
+        elif choice == 'addurl':
+            downloader.interactive_add_url()
+        elif choice == 'list':
+            downloader.list_configs()
         elif choice == 'download':
             downloader.download_all()
         else:
