@@ -26,3 +26,64 @@
 2025-07-05 18:47:29,300 - INFO - URL: https://space.bilibili.com/3546754433681656/lists/4126508?type=season
 2025-07-05 18:47:29,300 - INFO - 下载路径: H:\video\STUDY
 2025-07-05 18:47:29,300 - INFO - 执行命令: yt-dlp -f bestvideo+bestaudio --format-sort vcodec:av01,h265,h264,vbr:desc,abr:desc --merge-output-format mp4 --write-thumbnail --embed-thumbnail --all-subs --cookies-from-browser firefox -o H:\video\STUDY\%(playlist_title)s/%(title)s.%(ext)s https://space.bilibili.com/3546754433681656/lists/4126508?type=season
+2025-07-05 19:51:39,053 - ERROR - 配置文件格式错误: Expecting value: line 7 column 17 (char 162)
+2025-07-05 19:56:19,458 - INFO - 成功加载配置文件: config.json
+2025-07-05 19:56:19,745 - INFO - yt-dlp版本: 2025.06.25
+2025-07-05 19:56:19,745 - INFO - 共找到 2 个下载配置
+2025-07-05 19:56:19,745 - INFO - 
+==================================================
+2025-07-05 19:56:19,745 - INFO - 处理配置 1/2
+2025-07-05 19:56:19,745 - INFO - 配置描述: 学习资料合集
+2025-07-05 19:56:19,745 - INFO - URL数量: 1
+2025-07-05 19:56:19,745 - INFO - 
+下载 URL 1/1
+2025-07-05 19:56:19,745 - INFO - 开始下载: java黑马
+2025-07-05 19:56:19,746 - INFO - URL: https://www.bilibili.com/video/BV1gb42177hm/?spm_id_from=333.337.search-card.all.click&vd_source=1d6fd906acf17dacad741140bed7eceb
+2025-07-05 19:56:19,746 - INFO - 下载路径: H:\video\STUDY
+2025-07-05 19:56:19,746 - INFO - 执行命令: yt-dlp -f bestvideo+bestaudio --format-sort vcodec:av01,h265,h264,vbr:desc,abr:desc --merge-output-format mp4 --write-thumbnail --embed-thumbnail --all-subs --cookies-from-browser firefox -o H:\video\STUDY\%(playlist_title)s/%(title)s.%(ext)s https://www.bilibili.com/video/BV1gb42177hm/?spm_id_from=333.337.search-card.all.click&vd_source=1d6fd906acf17dacad741140bed7eceb
+2025-07-05 20:00:28,665 - INFO - 成功加载配置文件: config.json
+2025-07-05 20:00:28,919 - INFO - yt-dlp版本: 2025.06.25
+2025-07-05 20:00:28,919 - INFO - 共找到 2 个下载配置
+2025-07-05 20:00:28,919 - INFO - 
+==================================================
+2025-07-05 20:00:28,919 - INFO - 处理配置 1/2
+2025-07-05 20:00:28,919 - INFO - 配置描述: 学习资料合集
+2025-07-05 20:00:28,920 - INFO - URL数量: 1
+2025-07-05 20:00:28,920 - INFO - 
+下载 URL 1/1
+2025-07-05 20:00:28,920 - INFO - 开始下载: 强化学习公开报告上交
+2025-07-05 20:00:28,920 - INFO - URL: https://space.bilibili.com/3546754433681656/lists/4165592?type=season
+2025-07-05 20:00:28,920 - INFO - 下载路径: H:\video\STUDY
+2025-07-05 20:00:28,920 - INFO - 执行命令: yt-dlp -f bestvideo+bestaudio --format-sort vcodec:av01,h265,h264,vbr:desc,abr:desc --merge-output-format mp4 --write-thumbnail --embed-thumbnail --all-subs --cookies-from-browser firefox -o H:\video\STUDY\%(playlist_title)s/%(title)s.%(ext)s https://space.bilibili.com/3546754433681656/lists/4165592?type=season
+2025-07-05 20:00:45,222 - INFO - 下载成功: 强化学习公开报告上交
+2025-07-05 20:00:45,223 - INFO - 
+==================================================
+2025-07-05 20:00:45,223 - INFO - 处理配置 2/2
+2025-07-05 20:00:45,223 - WARNING - 配置 2 没有URL
+2025-07-05 20:00:45,223 - INFO - 
+==================================================
+2025-07-05 20:00:45,223 - INFO - 下载完成! 成功: 1, 失败: 0
+2025-07-05 20:04:45,259 - INFO - 成功加载配置文件: config.json
+2025-07-05 20:04:55,515 - INFO - 成功加载配置文件: config.json
+2025-07-05 20:05:17,795 - INFO - 成功加载配置文件: config.json
+2025-07-05 20:09:19,585 - INFO - 成功加载配置文件: config.json
+2025-07-05 20:09:19,841 - INFO - yt-dlp版本: 2025.06.25
+2025-07-05 20:09:43,145 - INFO - 开始下载: 强化学习公开报告上交
+2025-07-05 20:09:43,145 - INFO - URL: https://space.bilibili.com/3546754433681656/lists/4165592?type=season
+2025-07-05 20:09:43,145 - INFO - 下载路径: H:\video\STUDY
+2025-07-05 20:09:43,145 - INFO - 执行命令: yt-dlp -f bestvideo+bestaudio --format-sort vcodec:av01,h265,h264,vbr:desc,abr:desc --merge-output-format mp4 --write-thumbnail --embed-thumbnail --all-subs --cookies-from-browser firefox -o H:\video\STUDY\%(playlist_title)s/%(title)s.%(ext)s https://space.bilibili.com/3546754433681656/lists/4165592?type=season
+2025-07-05 20:10:04,640 - INFO - 下载成功: 强化学习公开报告上交
+2025-07-05 20:10:23,797 - INFO - 成功加载配置文件: config.json
+2025-07-05 20:12:38,267 - INFO - 成功加载配置文件: config.json
+2025-07-05 20:12:38,532 - INFO - yt-dlp版本: 2025.06.25
+2025-07-05 20:15:08,132 - INFO - 成功加载配置文件: config.json
+2025-07-05 20:15:08,385 - INFO - yt-dlp版本: 2025.06.25
+2025-07-05 20:15:22,880 - INFO - 开始下载: 强化学习公开报告上交
+2025-07-05 20:15:22,881 - INFO - URL: https://space.bilibili.com/3546754433681656/lists/4165592?type=season
+2025-07-05 20:15:22,881 - INFO - 下载路径: H:\video\STUDY
+2025-07-05 20:15:22,881 - INFO - 执行命令: yt-dlp -f bestvideo+bestaudio --format-sort vcodec:av01,h265,h264,vbr:desc,abr:desc --merge-output-format mp4 --write-thumbnail --embed-thumbnail --all-subs --cookies-from-browser firefox -o H:\video\STUDY\%(playlist_title)s/%(title)s.%(ext)s https://space.bilibili.com/3546754433681656/lists/4165592?type=season
+2025-07-05 20:15:34,337 - INFO - 下载成功: 强化学习公开报告上交
+2025-07-05 20:15:34,338 - INFO - 开始下载: 强化学习课上交
+2025-07-05 20:15:34,338 - INFO - URL: https://space.bilibili.com/3546754433681656/lists/4126508?type=season
+2025-07-05 20:15:34,338 - INFO - 下载路径: H:\video\STUDY
+2025-07-05 20:15:34,338 - INFO - 执行命令: yt-dlp -f bestvideo+bestaudio --format-sort vcodec:av01,h265,h264,vbr:desc,abr:desc --merge-output-format mp4 --write-thumbnail --embed-thumbnail --all-subs --cookies-from-browser firefox -o H:\video\STUDY\%(playlist_title)s/%(title)s.%(ext)s https://space.bilibili.com/3546754433681656/lists/4126508?type=season

@@ -314,6 +314,104 @@ class VideoDownloader:
         except Exception as e:
             logger.error(f"添加URL失败: {e}")
             return False
+        
+    def interactive_download(self) -> None:
+        """交互式选择下载"""
+        if not self.check_yt_dlp():
+            return
+            
+        # 直接进入选择特定URL下载，不显示二级菜单
+        self.interactive_select_download()
+            
+    def interactive_select_download(self) -> None:
+        """交互式选择特定URL下载"""
+        download_configs = self.config.get('download_configs', [])
+        
+        if not download_configs:
+            print("没有找到任何配置")
+            return
+            
+        # 显示所有配置和URL
+        print("\n=== 可用的下载项目 ===")
+        url_list = []
+        
+        for i, config in enumerate(download_configs):
+            print(f"\n配置 {i+1}: {config.get('description', '无描述')}")
+            print(f"路径: {config.get('download_path', '无路径')}")
+            
+            urls = config.get('urls', [])
+            for j, url_config in enumerate(urls):
+                url_index = len(url_list) + 1
+                
+                if isinstance(url_config, str):
+                    url = url_config
+                    url_description = f"视频 {j+1}"
+                else:
+                    url = url_config.get('url', '')
+                    url_description = url_config.get('description', f"视频 {j+1}")
+                
+                url_list.append({
+                    'config_index': i,
+                    'url': url,
+                    'description': url_description,
+                    'download_path': config.get('download_path', '')
+                })
+                
+                print(f"  {url_index}. {url_description}")
+                
+        if not url_list:
+            print("没有找到任何URL")
+            return
+            
+        print(f"\n共 {len(url_list)} 个下载项目")
+        
+        # 获取用户选择
+        while True:
+            try:
+                selection = input(f"\n请输入要下载的项目编号 (1-{len(url_list)}), 用逗号分隔多个项目，或输入 'all' 下载全部: ").strip()
+                
+                if selection.lower() == 'all':
+                    selected_indices = list(range(len(url_list)))
+                    break
+                elif selection.lower() == 'exit':
+                    return
+                else:
+                    # 解析用户输入的编号
+                    selected_indices = []
+                    for num_str in selection.split(','):
+                        num = int(num_str.strip())
+                        if 1 <= num <= len(url_list):
+                            selected_indices.append(num - 1)
+                        else:
+                            print(f"编号 {num} 超出范围")
+                            continue
+                    
+                    if selected_indices:
+                        break
+                    else:
+                        print("没有有效的选择")
+                        continue
+                        
+            except ValueError:
+                print("请输入有效的数字")
+                continue
+        
+        # 下载选中的URL
+        print(f"\n开始下载 {len(selected_indices)} 个项目...")
+        success_count = 0
+        fail_count = 0
+        
+        for i, url_index in enumerate(selected_indices, 1):
+            url_info = url_list[url_index]
+            print(f"\n下载进度: {i}/{len(selected_indices)}")
+            
+            if self.download_url(url_info['url'], url_info['download_path'], url_info['description']):
+                success_count += 1
+            else:
+                fail_count += 1
+                
+        print(f"\n{'='*50}")
+        print(f"选择性下载完成! 成功: {success_count}, 失败: {fail_count}")
 
 def main():
     """主函数"""
@@ -329,17 +427,20 @@ def main():
             downloader.list_configs()
         elif command == 'download':
             downloader.download_all()
+        elif command == 'select':
+            downloader.interactive_download()
         else:
-            print("未知命令，支持的命令: add, addurl, list, download")
+            print("未知命令，支持的命令: add, addurl, list, download, select")
     else:
         print("视频下载器")
         print("使用方法:")
         print("  python download.py add      - 添加新的下载配置")
         print("  python download.py addurl   - 向现有配置添加URL")
         print("  python download.py list     - 列出所有配置")
-        print("  python download.py download - 开始下载")
+        print("  python download.py download - 开始下载全部")
+        print("  python download.py select   - 选择性下载")
         
-        choice = input("\n请选择操作 (add/addurl/list/download): ").strip().lower()
+        choice = input("\n请选择操作 (add/addurl/list/download/select): ").strip().lower()
         if choice == 'add':
             downloader.interactive_add_config()
         elif choice == 'addurl':
@@ -348,6 +449,8 @@ def main():
             downloader.list_configs()
         elif choice == 'download':
             downloader.download_all()
+        elif choice == 'select':
+            downloader.interactive_download()
         else:
             print("无效选择")
 
