@@ -157,20 +157,31 @@ def find_matching_srt_files(ass_file_path):
     """根据ASS文件路径，查找匹配的SRT文件"""
     # 获取ASS文件的基本名称（去掉.danmaku.ass扩展名）
     base_name = ass_file_path.replace('.danmaku.ass', '')
-    
-    # 查找所有可能的SRT文件
-    srt_patterns = [
-        f"{base_name}.*.srt",  # 匹配所有类型的SRT文件
-    ]
-    
+
+    # 获取目录和文件名
+    directory = os.path.dirname(ass_file_path)
+    filename_base = os.path.basename(base_name)
+
     matching_srt_files = []
-    for pattern in srt_patterns:
-        matching_files = glob.glob(pattern)
-        matching_srt_files.extend(matching_files)
-    
+
+    # 使用os.listdir()代替glob.glob()来避免方括号问题
+    try:
+        if os.path.exists(directory):
+            files_in_dir = os.listdir(directory)
+            for file in files_in_dir:
+                # 检查文件是否以基本名称开头并以.srt结尾
+                if file.startswith(filename_base) and file.endswith('.srt'):
+                    # 确保中间有一个点（避免匹配到不相关的文件）
+                    middle_part = file[len(filename_base):-4]  # 去掉.srt
+                    if middle_part.startswith('.') and len(middle_part) > 1:
+                        full_path = os.path.join(directory, file)
+                        matching_srt_files.append(full_path)
+    except Exception as e:
+        print(f"  警告: 扫描目录时出错 {directory}: {e}")
+
     # 去重并排序
     matching_srt_files = sorted(list(set(matching_srt_files)))
-    
+
     return matching_srt_files
 
 
