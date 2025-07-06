@@ -221,3 +221,109 @@
 2025-07-06 08:32:56,268 - INFO - URL: https://www.bilibili.com/video/BV1et411b73Z/?spm_id_from=333.337.search-card.all.click&vd_source=1d6fd906acf17dacad741140bed7eceb
 2025-07-06 08:32:56,268 - INFO - 下载路径: H:\video\STUDY
 2025-07-06 08:32:56,268 - INFO - 执行命令: yt-dlp -f bestvideo+bestaudio --format-sort vcodec:av01,h265,h264,vbr:desc,abr:desc --merge-output-format mp4 --write-thumbnail --embed-thumbnail --all-subs --cookies-from-browser firefox -o H:\video\STUDY\%(playlist_title)s/%(title)s.%(ext)s https://www.bilibili.com/video/BV1et411b73Z/?spm_id_from=333.337.search-card.all.click&vd_source=1d6fd906acf17dacad741140bed7eceb
+2025-07-06 08:33:38,172 - INFO - 成功加载配置文件: config.json
+2025-07-06 08:33:38,445 - INFO - yt-dlp版本: 2025.06.25
+2025-07-06 08:33:38,445 - INFO - 共找到 2 个下载配置
+2025-07-06 08:33:38,445 - INFO - 
+==================================================
+2025-07-06 08:33:38,445 - INFO - 处理配置 1/2
+2025-07-06 08:33:38,445 - INFO - 配置描述: 学习资料合集
+2025-07-06 08:33:38,445 - INFO - URL数量: 12
+2025-07-06 08:33:38,445 - INFO - 
+下载 URL 1/12
+2025-07-06 08:33:38,446 - INFO - 开始下载: 强化学习数学基础西湖大学
+2025-07-06 08:33:38,446 - INFO - URL: https://space.bilibili.com/2044042934/lists/2638814?type=series
+2025-07-06 08:33:38,446 - INFO - 下载路径: H:\video\STUDY
+2025-07-06 08:33:38,446 - INFO - 执行命令: yt-dlp -f bestvideo+bestaudio --format-sort vcodec:av01,h265,h264,vbr:desc,abr:desc --merge-output-format mp4 --write-thumbnail --embed-thumbnail --all-subs --cookies-from-browser firefox -o H:\video\STUDY\%(playlist_title)s/%(title)s.%(ext)s https://space.bilibili.com/2044042934/lists/2638814?type=series
+2025-07-06 08:34:50,085 - INFO - 下载成功: 强化学习数学基础西湖大学
+2025-07-06 08:34:50,085 - INFO - 
+下载 URL 2/12
+2025-07-06 08:34:50,085 - INFO - 开始下载: 强化学习公开报告上交
+2025-07-06 08:34:50,085 - INFO - URL: https://space.bilibili.com/3546754433681656/lists/4165592?type=season
+2025-07-06 08:34:50,085 - INFO - 下载路径: H:\video\STUDY
+2025-07-06 08:34:50,085 - INFO - 执行命令: yt-dlp -f bestvideo+bestaudio --format-sort vcodec:av01,h265,h264,vbr:desc,abr:desc --merge-output-format mp4 --write-thumbnail --embed-thumbnail --all-subs --cookies-from-browser firefox -o H:\video\STUDY\%(playlist_title)s/%(title)s.%(ext)s https://space.bilibili.com/3546754433681656/lists/4165592?type=season
+2025-07-06 08:34:55,590 - INFO - 下载成功: 强化学习公开报告上交
+2025-07-06 08:34:55,590 - INFO - 
+下载 URL 3/12
+2025-07-06 08:34:55,590 - INFO - 开始下载: 强化学习课上交
+2025-07-06 08:34:55,590 - INFO - URL: https://space.bilibili.com/3546754433681656/lists/4126508?type=season
+2025-07-06 08:34:55,590 - INFO - 下载路径: H:\video\STUDY
+2025-07-06 08:34:55,591 - INFO - 执行命令: yt-dlp -f bestvideo+bestaudio --format-sort vcodec:av01,h265,h264,vbr:desc,abr:desc --merge-output-format mp4 --write-thumbnail --embed-thumbnail --all-subs --cookies-from-browser firefox -o H:\video\STUDY\%(playlist_title)s/%(title)s.%(ext)s https://space.bilibili.com/3546754433681656/lists/4126508?type=season
+2025-07-06 08:35:46,025 - INFO - 下载成功: 强化学习课上交
+2025-07-06 08:35:46,026 - INFO - 
+下载 URL 4/12
+2025-07-06 08:35:46,026 - INFO - 开始下载: C++黑马
+2025-07-06 08:35:46,026 - INFO - URL: https://www.bilibili.com/video/BV1et411b73Z/?spm_id_from=333.337.search-card.all.click&vd_source=1d6fd906acf17dacad741140bed7eceb
+2025-07-06 08:35:46,026 - INFO - 下载路径: H:\video\STUDY
+2025-07-06 08:35:46,026 - INFO - 执行命令: yt-dlp -f bestvideo+bestaudio --format-sort vcodec:av01,h265,h264,vbr:desc,abr:desc --merge-output-format mp4 --write-thumbnail --embed-thumbnail --all-subs --cookies-from-browser firefox -o H:\video\STUDY\%(playlist_title)s/%(title)s.%(ext)s https://www.bilibili.com/video/BV1et411b73Z/?spm_id_from=333.337.search-card.all.click&vd_source=1d6fd906acf17dacad741140bed7eceb
+2025-07-06 08:42:54,708 - INFO - 下载成功: C++黑马
+2025-07-06 08:42:54,709 - INFO - 
+下载 URL 5/12
+2025-07-06 08:42:54,709 - INFO - 开始下载: java黑马
+2025-07-06 08:42:54,709 - INFO - URL: https://www.bilibili.com/video/BV1gb42177hm/?spm_id_from=333.337.search-card.all.click&vd_source=1d6fd906acf17dacad741140bed7eceb
+2025-07-06 08:42:54,709 - INFO - 下载路径: H:\video\STUDY
+2025-07-06 08:42:54,709 - INFO - 执行命令: yt-dlp -f bestvideo+bestaudio --format-sort vcodec:av01,h265,h264,vbr:desc,abr:desc --merge-output-format mp4 --write-thumbnail --embed-thumbnail --all-subs --cookies-from-browser firefox -o H:\video\STUDY\%(playlist_title)s/%(title)s.%(ext)s https://www.bilibili.com/video/BV1gb42177hm/?spm_id_from=333.337.search-card.all.click&vd_source=1d6fd906acf17dacad741140bed7eceb
+2025-07-06 08:50:44,362 - ERROR - 下载失败: java黑马
+2025-07-06 08:50:44,362 - INFO - 
+下载 URL 6/12
+2025-07-06 08:50:44,362 - INFO - 开始下载: rust_2025
+2025-07-06 08:50:44,362 - INFO - URL: https://space.bilibili.com/361469957/lists/3902595?type=season
+2025-07-06 08:50:44,362 - INFO - 下载路径: H:\video\STUDY
+2025-07-06 08:50:44,363 - INFO - 执行命令: yt-dlp -f bestvideo+bestaudio --format-sort vcodec:av01,h265,h264,vbr:desc,abr:desc --merge-output-format mp4 --write-thumbnail --embed-thumbnail --all-subs --cookies-from-browser firefox -o H:\video\STUDY\%(playlist_title)s/%(title)s.%(ext)s https://space.bilibili.com/361469957/lists/3902595?type=season
+2025-07-06 08:52:13,706 - INFO - 下载成功: rust_2025
+2025-07-06 08:52:13,707 - INFO - 
+下载 URL 7/12
+2025-07-06 08:52:13,707 - INFO - 开始下载: rust_2020
+2025-07-06 08:52:13,707 - INFO - URL: https://www.bilibili.com/video/BV1hp4y1k7SV/?spm_id_from=333.1387.collection.video_card.click&vd_source=1d6fd906acf17dacad741140bed7eceb
+2025-07-06 08:52:13,707 - INFO - 下载路径: H:\video\STUDY
+2025-07-06 08:52:13,707 - INFO - 执行命令: yt-dlp -f bestvideo+bestaudio --format-sort vcodec:av01,h265,h264,vbr:desc,abr:desc --merge-output-format mp4 --write-thumbnail --embed-thumbnail --all-subs --cookies-from-browser firefox -o H:\video\STUDY\%(playlist_title)s/%(title)s.%(ext)s https://www.bilibili.com/video/BV1hp4y1k7SV/?spm_id_from=333.1387.collection.video_card.click&vd_source=1d6fd906acf17dacad741140bed7eceb
+2025-07-06 08:54:41,477 - ERROR - 下载失败: rust_2020
+2025-07-06 08:54:41,477 - INFO - 
+下载 URL 8/12
+2025-07-06 08:54:41,477 - INFO - 开始下载: 操作系统_蒋炎岩_2025_南京大学
+2025-07-06 08:54:41,477 - INFO - URL: https://space.bilibili.com/202224425/lists/4823953?type=season
+2025-07-06 08:54:41,477 - INFO - 下载路径: H:\video\STUDY
+2025-07-06 08:54:41,477 - INFO - 执行命令: yt-dlp -f bestvideo+bestaudio --format-sort vcodec:av01,h265,h264,vbr:desc,abr:desc --merge-output-format mp4 --write-thumbnail --embed-thumbnail --all-subs --cookies-from-browser firefox -o H:\video\STUDY\%(playlist_title)s/%(title)s.%(ext)s https://space.bilibili.com/202224425/lists/4823953?type=season
+2025-07-06 08:57:55,505 - INFO - 下载成功: 操作系统_蒋炎岩_2025_南京大学
+2025-07-06 08:57:55,505 - INFO - 
+下载 URL 9/12
+2025-07-06 08:57:55,505 - INFO - 开始下载: 操作系统_2025_中山大学
+2025-07-06 08:57:55,505 - INFO - URL: https://www.bilibili.com/video/BV1Rt91YfE3n/?spm_id_from=333.1387.homepage.video_card.click&vd_source=1d6fd906acf17dacad741140bed7eceb
+2025-07-06 08:57:55,505 - INFO - 下载路径: H:\video\STUDY
+2025-07-06 08:57:55,506 - INFO - 执行命令: yt-dlp -f bestvideo+bestaudio --format-sort vcodec:av01,h265,h264,vbr:desc,abr:desc --merge-output-format mp4 --write-thumbnail --embed-thumbnail --all-subs --cookies-from-browser firefox -o H:\video\STUDY\%(playlist_title)s/%(title)s.%(ext)s https://www.bilibili.com/video/BV1Rt91YfE3n/?spm_id_from=333.1387.homepage.video_card.click&vd_source=1d6fd906acf17dacad741140bed7eceb
+2025-07-06 08:57:58,346 - INFO - 下载成功: 操作系统_2025_中山大学
+2025-07-06 08:57:58,346 - INFO - 
+下载 URL 10/12
+2025-07-06 08:57:58,346 - INFO - 开始下载: 深度学习_2025_清华吴翼
+2025-07-06 08:57:58,346 - INFO - URL: https://space.bilibili.com/3546838151989540/lists/5054336?type=season
+2025-07-06 08:57:58,346 - INFO - 下载路径: H:\video\STUDY
+2025-07-06 08:57:58,347 - INFO - 执行命令: yt-dlp -f bestvideo+bestaudio --format-sort vcodec:av01,h265,h264,vbr:desc,abr:desc --merge-output-format mp4 --write-thumbnail --embed-thumbnail --all-subs --cookies-from-browser firefox -o H:\video\STUDY\%(playlist_title)s/%(title)s.%(ext)s https://space.bilibili.com/3546838151989540/lists/5054336?type=season
+2025-07-06 08:58:30,275 - INFO - 下载成功: 深度学习_2025_清华吴翼
+2025-07-06 08:58:30,275 - INFO - 
+下载 URL 11/12
+2025-07-06 08:58:30,275 - INFO - 开始下载: 数据结构（C）_2024_逊哥
+2025-07-06 08:58:30,275 - INFO - URL: https://www.bilibili.com/video/BV1tNpbekEht/?spm_id_from=333.337.search-card.all.click&vd_source=1d6fd906acf17dacad741140bed7eceb
+2025-07-06 08:58:30,275 - INFO - 下载路径: H:\video\STUDY
+2025-07-06 08:58:30,276 - INFO - 执行命令: yt-dlp -f bestvideo+bestaudio --format-sort vcodec:av01,h265,h264,vbr:desc,abr:desc --merge-output-format mp4 --write-thumbnail --embed-thumbnail --all-subs --cookies-from-browser firefox -o H:\video\STUDY\%(playlist_title)s/%(title)s.%(ext)s https://www.bilibili.com/video/BV1tNpbekEht/?spm_id_from=333.337.search-card.all.click&vd_source=1d6fd906acf17dacad741140bed7eceb
+2025-07-06 08:59:08,537 - INFO - 下载成功: 数据结构（C）_2024_逊哥
+2025-07-06 08:59:08,537 - INFO - 
+下载 URL 12/12
+2025-07-06 08:59:08,537 - INFO - 开始下载: 数据结构_2020_青岛大学
+2025-07-06 08:59:08,537 - INFO - URL: https://www.bilibili.com/video/BV1nJ411V7bd/?spm_id_from=333.337.search-card.all.click&vd_source=1d6fd906acf17dacad741140bed7eceb
+2025-07-06 08:59:08,537 - INFO - 下载路径: H:\video\STUDY
+2025-07-06 08:59:08,537 - INFO - 执行命令: yt-dlp -f bestvideo+bestaudio --format-sort vcodec:av01,h265,h264,vbr:desc,abr:desc --merge-output-format mp4 --write-thumbnail --embed-thumbnail --all-subs --cookies-from-browser firefox -o H:\video\STUDY\%(playlist_title)s/%(title)s.%(ext)s https://www.bilibili.com/video/BV1nJ411V7bd/?spm_id_from=333.337.search-card.all.click&vd_source=1d6fd906acf17dacad741140bed7eceb
+2025-07-06 09:03:34,280 - INFO - 下载成功: 数据结构_2020_青岛大学
+2025-07-06 09:03:34,280 - INFO - 
+==================================================
+2025-07-06 09:03:34,280 - INFO - 处理配置 2/2
+2025-07-06 09:03:34,280 - WARNING - 配置 2 没有URL
+2025-07-06 09:03:34,280 - INFO - 
+==================================================
+2025-07-06 09:03:34,280 - INFO - 下载完成! 成功: 10, 失败: 2
+2025-07-06 09:08:22,666 - INFO - 成功加载配置文件: config.json
+2025-07-06 09:08:22,978 - INFO - yt-dlp版本: 2025.06.25
+2025-07-06 09:08:32,641 - INFO - 开始下载: 操作系统_2025_中山大学
+2025-07-06 09:08:32,641 - INFO - URL: https://space.bilibili.com/502854403/lists/4945279?type=season
+2025-07-06 09:08:32,641 - INFO - 下载路径: H:\video\STUDY
+2025-07-06 09:08:32,641 - INFO - 执行命令: yt-dlp -f bestvideo+bestaudio --format-sort vcodec:av01,h265,h264,vbr:desc,abr:desc --merge-output-format mp4 --write-thumbnail --embed-thumbnail --all-subs --cookies-from-browser firefox -o H:\video\STUDY\%(playlist_title)s/%(title)s.%(ext)s https://space.bilibili.com/502854403/lists/4945279?type=season
+2025-07-06 09:29:17,101 - INFO - 下载成功: 操作系统_2025_中山大学

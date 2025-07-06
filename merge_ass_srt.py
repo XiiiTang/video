@@ -208,10 +208,10 @@ def generate_output_filename(srt_file_path, ass_file_path):
             lang_part = lang_part[1:]  # 移除开头的点
         
         # 生成输出文件名
-        output_filename = f"{ass_base}.{lang_part}.merged.ass"
+        output_filename = f"{ass_base}.ko.{lang_part}.ass"
     else:
         # 如果无法匹配，使用默认命名
-        output_filename = f"{ass_base}.merged.ass"
+        output_filename = f"{ass_base}.ko.ass"
     
     return os.path.join(os.path.dirname(ass_file_path), output_filename)
 
