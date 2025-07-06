@@ -29,12 +29,18 @@ goto end
 python download.py download
 if %errorlevel% equ 0 (
     echo.
-    echo 下载完成，正在运行字幕合并...
-    python merge_ass_srt.py
+    echo 下载完成，正在运行批量转换...
+    python batch_convert.py
     if %errorlevel% equ 0 (
-        echo 字幕合并完成！
+        echo 批量转换完成，正在运行字幕合并...
+        python merge_ass_srt.py
+        if %errorlevel% equ 0 (
+            echo 字幕合并完成！
+        ) else (
+            echo 字幕合并失败！
+        )
     ) else (
-        echo 字幕合并失败！
+        echo 批量转换失败！
     )
 ) else (
     echo 下载失败！
@@ -45,12 +51,18 @@ goto end
 python download.py select
 if %errorlevel% equ 0 (
     echo.
-    echo 下载完成，正在运行字幕合并...
-    python merge_ass_srt.py
+    echo 下载完成，正在运行批量转换...
+    python batch_convert.py
     if %errorlevel% equ 0 (
-        echo 字幕合并完成！
+        echo 批量转换完成，正在运行字幕合并...
+        python merge_ass_srt.py
+        if %errorlevel% equ 0 (
+            echo 字幕合并完成！
+        ) else (
+            echo 字幕合并失败！
+        )
     ) else (
-        echo 字幕合并失败！
+        echo 批量转换失败！
     )
 ) else (
     echo 下载失败！
