@@ -3,13 +3,13 @@ import subprocess
 
 def main():
     """
-    批量转换H:\video文件夹中的XML弹幕文件为ASS文件
+    批量转换E:\video文件夹中的XML弹幕文件为ASS文件
     """
-    # 固定处理H:\video文件夹
-    folder_path = r"H:\video"
+    # 固定处理E:\video文件夹
+    folder_path = r"E:\video"
     
     # danmu2ass.exe 的路径
-    danmu2ass_path = r"C:\Users\Xiiii\Downloads\danmu2ass-windows\danmu2ass.exe"
+    danmu2ass_path = r".\danmu2ass-windows\danmu2ass.exe"
     
     # 检查danmu2ass.exe是否存在
     if not os.path.exists(danmu2ass_path):

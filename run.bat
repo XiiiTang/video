@@ -2,6 +2,16 @@
 chcp 65001 > nul
 cd /d "%~dp0"
 
+echo 初始化 conda 环境...
+:: 设置 conda 路径
+set "CONDA_PATH=E:\anaconda3"
+set "PATH=%CONDA_PATH%;%CONDA_PATH%\Scripts;%CONDA_PATH%\Library\bin;%PATH%"
+
+:: 初始化 conda
+call "%CONDA_PATH%\Scripts\activate.bat" "%CONDA_PATH%"
+
+echo 使用 video conda 环境运行...
+
 :menu
 echo 视频下载器
 echo.
@@ -22,10 +32,12 @@ if "%choice%"=="5" goto exit_program
 goto invalid_choice
 
 :add_config
+call conda activate video
 python download.py add
 goto end
 
 :download_all
+call conda activate video
 python download.py download
 if %errorlevel% equ 0 (
     echo.
@@ -48,6 +60,7 @@ if %errorlevel% equ 0 (
 goto end
 
 :select_download
+call conda activate video
 python download.py select
 if %errorlevel% equ 0 (
     echo.
@@ -70,6 +83,7 @@ if %errorlevel% equ 0 (
 goto end
 
 :list_configs
+call conda activate video
 python download.py list
 goto end
 

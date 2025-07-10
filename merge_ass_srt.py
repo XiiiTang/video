@@ -230,7 +230,7 @@ def generate_output_filename(srt_file_path, ass_file_path):
 def main():
     """主函数"""
     # 扫描根目录
-    root_directory = r"H:\video\STUDY"
+    root_directory = r"E:\video\STUDY"
     
     print("=" * 60)
     print("批量合并ASS弹幕文件和SRT字幕文件")

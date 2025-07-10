@@ -45,7 +45,7 @@ def delete_merged_ass_files(directory):
 
 def main():
     # 设置要扫描的目录
-    video_directory = r"H:\video"
+    video_directory = r"E:\video"
     
     # 检查目录是否存在
     if not os.path.exists(video_directory):

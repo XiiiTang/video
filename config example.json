@@ -1,7 +1,7 @@
 {
     "download_configs": [
         {
-            "download_path": "H:\\video\\STUDY",
+            "download_path": "E:\\video\\STUDY",
             "description": "学习资料合集",
             "urls": [
                 {
@@ -31,7 +31,7 @@
             ]
         },
         {
-            "download_path": "H:\\video\\English",
+            "download_path": "E:\\video\\English",
             "description": "英语学习资料",
             "urls": [
             ]
